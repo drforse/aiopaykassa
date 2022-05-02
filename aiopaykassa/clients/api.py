@@ -24,7 +24,7 @@ class PayKassaApi(BasePayKassaApi):
             currency: Currency,
             system: System,
             number: str,
-            tag: int | float,
+            tag: int | float | None = None,
             paid_commission: ShopClient = ShopClient.SHOP,
             priority: Priority = Priority.MEDIUM) -> Payment:
         """Instant payment. Method for making automatic masspayments from your merchant account."""

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aiopaykassa"
-version = "0.0.1a1"
+version = "0.0.1a2"
 description = "Paykassa.pro asyncio python client"
 authors = ["drforse <george.lifeslice@gmail.com>"]
 readme = "README.md"

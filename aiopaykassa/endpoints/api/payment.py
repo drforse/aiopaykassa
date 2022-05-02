@@ -13,7 +13,7 @@ class PaymentEndpoint(PayKassaEndpoint):
     system: System
     paid_commission: ShopClient = ShopClient.SHOP
     number: str
-    tag: int | float
+    tag: int | float | None = None
     priority: Priority = Priority.MEDIUM
 
     def url(self) -> str:
@@ -23,6 +23,6 @@ class PaymentEndpoint(PayKassaEndpoint):
         if credentials is None:
             raise AioPayKassaError("Credentials are required")
         return Request(
-            data=self.dict() | {"test": str(test_mode).lower(),
-                                "func": "api_payment"} | credentials
+            data=self.dict(exclude_none=True) | {"test": str(test_mode).lower(),
+                                                 "func": "api_payment"} | credentials
         )
