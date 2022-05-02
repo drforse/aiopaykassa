@@ -1,8 +1,22 @@
 [tool.poetry]
 name = "aiopaykassa"
-version = "0.0.1"
-description = ""
+version = "0.0.1a1"
+description = "Paykassa.pro asyncio python client"
 authors = ["drforse <george.lifeslice@gmail.com>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/drforse/aiopaykassa"
+repository = "https://github.com/drforse/aiopaykassa"
+classifiers = [
+    "Framework :: AsyncIO",
+    "Framework :: aiohttp",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Operating System :: OS Independent",
+]
+include = [
+    "LICENSE",
+]
 
 [tool.poetry.dependencies]
 python = "^3.10"
